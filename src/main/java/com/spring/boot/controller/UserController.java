@@ -254,8 +254,9 @@ public class UserController {
 	
 	@PostMapping("/processBuySell")
 	@ResponseBody
-	public String processBuySell(@RequestParam("stockOptionList.value") String stockOptionList)
+	public String processBuySell(@RequestParam("stockOptionList.value") String stockOptionList, Model model)
 	{
+		model.addAttribute("title", "Process Buy & Sell");
 		System.out.println(stockOptionList);
 		return "DEMO";
 	}
